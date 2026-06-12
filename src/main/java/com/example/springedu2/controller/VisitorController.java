@@ -79,7 +79,8 @@ public class VisitorController {
             model.addAttribute("msg", "이름과 내용을 모두 입력하세요");
             return "visitorView"; // visitorView.html
         }
-        visitorRepository.save(visitor); // entity 객체를 사용해야한다. save() 여기 괄호안에 적는건 entity 타입만 적을 수 있음
+        visitorRepository.save(visitor); // insert 실행 entity type
+        // entity 객체를 사용해야한다. save() 여기 괄호안에 적는건 entity 타입만 적을 수 있음
 
         return "redirect:/vlist";
 
